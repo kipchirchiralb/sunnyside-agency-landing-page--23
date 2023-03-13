@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Barlow", sans-serif;
+}
+
+.header-bg {
+  position: relative;
+}
+.header-bg > img {
+  width: 100%;
+  display: block;
+}
+.header-bg .header-img-desktop {
+  display: none;
+}
+header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 50px;
+  padding: 10px 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.main-logo {
+  height: 25px;
+}
+.menu-icon {
+  background: transparent;
+  border: none;
+}
+.hero {
+  position: absolute;
+  top: 130px;
+  left: 0px;
+  right: 0px;
+  padding: 10px 25px;
+  font-size: 35px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+.hero-heading {
+  margin-bottom: 50px;
+}
+.hero-arrow {
+  height: 200px;
+}
+
+/* why us section */
+
+.why-us > img {
+  width: 100%;
+}
+.why-us-text {
+  text-align: center;
+  padding: 30px;
+}
+.why-us-text h2 {
+  font-weight: 900;
+  font-size: 32px;
+  font-family: "Fraunces";
+  margin-bottom: 30px;
+}
+.why-us-text a {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 17px;
+  font-family: "Fraunces";
+  margin-bottom: 30px;
+  margin-top: 20px;
+  display: inline-block;
+  color: black;
+}
+
+/* services  */
+.service {
+  position: relative;
+}
+.service img {
+  width: 100%;
+}
+.service .g-d-desktop {
+  display: none;
+}
+.service .ph-desktop {
+  display: none;
+}
+.service-text {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  right: 10px;
+  text-align: center;
+  height: 38%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.service-text h2 {
+  font-size: 38px;
+  font-family: "Fraunces";
+}
+.service-text p {
+  font-size: 17px;
+}
+
+/* testimonials */
+.testimonials h2 {
+  font-size: 12px;
+  text-align: center;
+  font-family: "Fraunces";
+  color: grey;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 10px;
+}
+.testimony {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.testimony img {
+  border-radius: 50%;
+  height: 70px;
+}
+.testimony p:nth-child(3) {
+  font-weight: bold;
+  font-size: 19px;
+  font-family: "Fraunces";
+}
+
+/* image galery */
+.image-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.image-gallery img {
+  width: 100%;
+}
+/* footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  gap: 25px;
+  background-color: rgba(15, 224, 224, 0.925);
+  color: hsl(168, 34%, 41%);
+  font: 17px;
+  text-decoration: none;
+}
+footer > img {
+  fill: #458c7e;
+}
+.quick-links,
+.social-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.social-links {
+  padding: 20px 10px;
+}
+.quick-links a {
+  font: inherit;
+  color: hsl(168, 34%, 41%);
+  font: 17px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* media queries - desktop / larger screens*/
+
+@media screen and (min-width: 600px) {
+  /* header & hero */
+  .header-bg > .header-img-desktop {
+    display: block;
+  }
+  .header-bg > .header-img-mobile {
+    display: none;
+  }
+  .hero {
+    top: 60px;
+  }
+  .hero-arrow {
+    height: 130px;
+  }
+  /* services */
+  .services {
+    display: flex;
+  }
+  .service .g-d-desktop {
+    display: inline-block;
+  }
+  .service .g-d-mobile {
+    display: none;
+  }
+  .service .ph-mobile {
+    display: none;
+  }
+  .service .ph-desktop {
+    display: inline-block;
+  }
+
+  /* why-us */
+  .why-us {
+    display: grid;
+    grid-template-areas: "text1 img1" "img2 text2";
+  }
+  .transform-brand-img {
+    grid-area: img1;
+  }
+  .transform-brand-text {
+    grid-area: text1;
+  }
+  .stand-out-img {
+    grid-area: img2;
+  }
+  .stand-out-text {
+    grid-area: text2;
+  }
+
+  /* img gallery */
+  .image-gallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  /* footer */
+  .quick-links,
+  .social-links {
+    max-width: 400px;
+  }
+}
